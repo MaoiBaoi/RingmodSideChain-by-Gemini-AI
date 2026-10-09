@@ -20,7 +20,6 @@ juce_add_plugin(RingModSidechain
     FORMATS VST3
     PRODUCT_NAME "RingMod Sidechain V3")
 
-# DIESE ZEILE BEHEBT DEN FEHLER:
 juce_generate_juce_header(RingModSidechain)
 
 target_sources(RingModSidechain PRIVATE
@@ -32,3 +31,5 @@ target_link_libraries(RingModSidechain PRIVATE
     juce::juce_audio_utils
     juce::juce_dsp
     juce::juce_gui_extra)
+
+target_compile_definitions(RingModSidechain PUBLIC JUCE_VST3_CAN_REPLACE_VST2=0)
