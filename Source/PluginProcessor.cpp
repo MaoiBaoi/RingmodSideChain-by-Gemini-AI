@@ -106,3 +106,8 @@ void RingModSidechainAudioProcessor::processBlock (juce::AudioBuffer<float>& buf
 }
 
 juce::AudioProcessorEditor* RingModSidechainAudioProcessor::createEditor() { return new RingModSidechainAudioProcessorEditor (*this); }
+// Diese Funktion erstellt die eigentliche Plugin-Instanz für die DAW
+juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
+{
+    return new RingModSidechainAudioProcessor();
+}
