@@ -20,6 +20,9 @@ juce_add_plugin(RingModSidechain
     FORMATS VST3
     PRODUCT_NAME "RingMod Sidechain V3")
 
+# DIESE ZEILE BEHEBT DEN FEHLER:
+juce_generate_juce_header(RingModSidechain)
+
 target_sources(RingModSidechain PRIVATE
     Source/PluginProcessor.cpp
     Source/PluginEditor.cpp)
