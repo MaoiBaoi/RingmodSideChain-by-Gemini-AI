@@ -13,4 +13,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RingModSidechain_V3_VST3
-          path: build/RingModSidechain_artefacts/Release/VST3/RingModSidechain.vst3
+          path: "build/RingModSidechain_artefacts/Release/VST3/RingMod Sidechain V3.vst3"
